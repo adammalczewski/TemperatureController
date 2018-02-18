@@ -1,0 +1,91 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  BorderStyle = bsSingle
+  Caption = 'Temperature Controller'
+  ClientHeight = 405
+  ClientWidth = 694
+  Fill.Color = xFF738156
+  Fill.Kind = bkSolid
+  StyleBook = StyleBook2
+  FormFactor.Width = 1366
+  FormFactor.Height = 768
+  FormFactor.Devices = [dkDesktop]
+  OnCreate = FormCreate
+  object Timer1: TTimer
+    Interval = 500
+    OnTimer = Timer1Timer
+    Left = 112
+    Top = 232
+  end
+  object ErrorLabel: TLabel
+    Align = alClient
+    Font.Size = 20.000000000000000000
+    FontColor = claMaroon
+    StyledSettings = [ssFamily]
+    Height = 47.000000000000000000
+    Text = 'Can'#39't Connect to Everest.'
+    TextAlign = taCenter
+    Visible = False
+    Width = 296.000000000000000000
+  end
+  object StaleLabel: TLabel
+    Align = alHorizontal
+    Font.Size = 20.000000000000000000
+    FontColor = claMaroon
+    StyledSettings = [ssFamily]
+    Height = 33.000000000000000000
+    Position.Y = 128.000000000000000000
+    Text = 'Data stopped updating.'
+    TextAlign = taCenter
+    Visible = False
+    Width = 694.000000000000000000
+  end
+  object StaleLabel2: TLabel
+    Align = alHorizontal
+    Font.Size = 20.000000000000000000
+    FontColor = claMaroon
+    StyledSettings = [ssFamily]
+    Height = 33.000000000000000000
+    Position.Y = 160.000000000000000000
+    Text = 'Check if Everest is still running.'
+    TextAlign = taCenter
+    Visible = False
+    Width = 694.000000000000000000
+  end
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [igPan]
+    Height = 377.000000000000000000
+    Position.X = 304.000000000000000000
+    Position.Y = 16.000000000000000000
+    Width = 377.000000000000000000
+    DisableFocusEffect = False
+    KeyboardType = vktDefault
+  end
+  object Panel1: TPanel
+    Align = alClient
+    Height = 405.000000000000000000
+    Opacity = 0.000000000000000000
+    PopupMenu = PopupMenu
+    Width = 694.000000000000000000
+  end
+  object StyleBook2: TStyleBook
+    Resource.Strings = (
+      'object TLayout'
+      '  Align = alClient'
+      '  Height = 759.000000000000000000'
+      '  Position.Y = 33.000000000000000000'
+      '  Width = 1378.000000000000000000'
+      'end')
+  end
+  object PopupMenu: TPopupMenu
+    Left = 64
+    Top = 184
+    object MenuItem1: TMenuItem
+      Height = 50.000000000000000000
+      Text = 'Options'
+      Width = 50.000000000000000000
+      OnClick = MenuItem1Click
+    end
+  end
+end
