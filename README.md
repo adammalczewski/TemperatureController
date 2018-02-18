@@ -1,5 +1,5 @@
 # TemperatureController
-Program which connects to the EVEREST (PC diagnostics application) through shared memory, takes values of the PC sensors' temperatures, displays them on the screen and alerts with repeated beep sound when they reach given treshold.
+Windows application which connects to the EVEREST (PC diagnostics application) through shared memory, takes values of the PC sensors' temperatures, displays them on the screen and alerts with repeated beep sound when they reach given treshold.
 It tries to open Everest application at start if you provide it with the path.
 
 Tested only with Everest version: 5.02.1765 Beta and Windows 8, 8.1, 10
